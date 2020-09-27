@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=divice-width, initial-scale=1, maximum-scale=1">
+    <title>WDD 330 Assignment Portal | William (Bill) Burton | BYU-Idaho</title>
+    <meta name="description" content="Assignment portal page for William Burton in WWD 330: Web Frontend Development II at BYU-Idaho">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <h1>Team Activity</h1>
+  </head>
+
+ <body>
+  <main>
+    <section>
+        <input id='number' type="number" min='0' max='10000'>
+        <button onclick='addall()'>Add all Numbers</button>
+        <div id='addall'></div>
+        <p>
+
+        </p>
+    </section>
+    <section>
+        <form>
+        Enter a number between 1 - 10000:  
+        <input id='number1' type="number" min='0' max='10000'>
+    </form>
+        <br>
+        <form>
+        Enter a number between 1 - 10000:   
+        <input id='number2' type="number" min='0' max='10000'>
+        </form>
+        <br>
+        <button id='add' onclick='math(this.id)'>Add</button>
+        <button id='subtract' onclick='math(this.id)'>Subtract</button>
+        <button id='multiply' onclick='math(this.id)'>Multiply</button>
+        <button id='divide' onclick='math(this.id)'>Divide</button>
+        <div id='plus'></div>
+    </section>    
+    
+</main>
+
+  <script>
+      function math(operation) {
+        let mathy = operation;
+        let number1 = document.getElementById('number1').value;
+        let number2 = document.getElementById('number2').value;
+        switch (mathy) {
+            case 'add':
+                document.getElementById('plus').innerHTML = Number(number1) + Number(number2);
+                break;
+            case 'subtract':
+                document.getElementById('plus').innerHTML = Number(number1) - Number(number2);
+                break;
+            case 'multiply': 
+                document.getElementById('plus').innerHTML = Number(number1) * Number(number2);
+                break;
+            case 'divide':
+                document.getElementById('plus').innerHTML = Number(number1) / Number(number2);
+                break;
+            default: 
+                document.getElementById('plus').innerHTML = 0;
+        }
+
+    }
+
+        function addall() {
+        let number = document.getElementById('number').value;
+        let sum = 0;
+        for (let i = 0; i <= number; i++) {
+            sum += i;
+        }
+        document.getElementById('addall').innerHTML = sum;
+    }
+    document.querySelector('#subtract').addEventListener('click', subtract);
+    document.querySelector('#multiply').addEventListener('click', multiply);
+    document.querySelector('#divide').addEventListener('click', divide);
+</script>
+
+ </body>
+ <p>
+
+ </p>
+ <footer>
+  &copy;2018, William Burton, Location: California; 
+  <a href="http://www.byui.edu/online"> BYU-Idaho Online Learning</a>
+</footer>
+ </html>
