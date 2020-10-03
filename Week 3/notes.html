@@ -10,7 +10,100 @@
   <h1>Chapter 5, 6, 7, Notes</h1>
   </head>
   <p>
+    <h2>Chapter 5</h2>
+    Object methods, "this"
+    “this” in methods<br>
+    It’s common that an object method needs to access the information stored in the object to do its job.
+    For instance, the code inside user.sayHi() may need the name of the user.
+    <br>
+    
+    <br>Functions that are stored in object properties are called “methods”.
+    <br>Methods allow objects to “act” like object.doSomething().
+    <br>Methods can reference the object as this.
+    <br>The value of this is defined at run-time.
+    <br>
+    When a function is declared, it may use this, but that this has no value until the function is called.
+    A function can be copied between objects.
+    When a function is called in the “method” syntax: object.method(), the value of this during the call is object.
+    Please note that arrow functions are special: they have no this. When this is accessed inside an arrow function, it is taken from outside.
+    <br>
+    <br>
+    <br>function makeUser() {
+        <br>return {
+            <br>name: "bill",
+            <br>ref() {
+                <br>return this;
+                <br> }
+                <br>};
+                <br>}
+                <br>let user = makeUser();
+                <br>alert(user.ref().name);
+                <br>
+    <br>
+    Everything in JavaScript is either one of the six primitive data types we met in Chapter 2 (strings, numbers, booleans, symbols, undefined, and null) or an object. We’ve actually met some objects already; arrays in Chapter 3 and functions in Chapter 4 are both objects, although these are built-in objects that are part of the language. In this chapter we’re going to look at user-defined objects, as well as some of the other built-in objects.<br>
+    <br>An object in JavaScript is a self-contained set of related values and functions.
+    <br>
+    <h3>Chapter 5 Summary<h3>
 
+     •	Objects are a collection of key-value pairs placed inside curly braces {}.<br>
+    •	Objects have properties that can be any JavaScript value. If it’s a function, it’s known as amethod.<br>
+    •	An object’s properties and methods can be accessed using either dot notation or square bracket notation.<br>
+    •	Objects are mutable, which means their properties and methods can be changed or removed.<br>
+    •	Objects can be used as parameters to functions, which allows arguments to be entered in any order, or omitted.<br>
+    •	Nested objects can be created by placing objects inside objects.<br>
+    •	JSON is a portable data format that uses JavaScript object literals to exchange information.<br>
+    •	The Math object gives access to a number of mathematical constants.<br>
+    •	The Math object can be used to perform mathematical calculations.<br>
+    •	The Date object can be used to create date objects.<br>
+    •	Once you’ve created a Date object, you can use the getter methods to access information about that date.<br>
+    •	Once you’ve created a Date object, setter methods can be used to change information about that date.<br>
+    •	The Regex object can be used to create regular expressions.<br>
+    <br>
+    <h2>Chapter 6</h2>
+    The Document Object Model
+    <br>The Document Object Model (DOM) allows you to access elements of a web page and enable interaction with the page by adding and removing elements, changing the order, content and attributes of elements, and even altering how they are styled.
+    
+    <br>Query Selectors
+    The document.querySelector() method allows you to use CSS notation to find thefirstelement in the document that matches that matches a CSS selector provided as an argument. If no elements match, it will return null .
+    <br>
+    The document.querySelectorAll() method also uses CSS notation but returns a node list ofallthe elements in the document that match the CSS query selector. If no elements match, it will return an empty node list.
+    <br>
+    The className Property
+    As we’ve seen, we can modify the class name of an element using the setAttribute() method. There is also a className property that allows the class of an element to be set directly. In addition, it can be used to find out the value of the class attribute:
+    <br>
+<h3>Chapter 6 Summary</h3>
+    <br>•	The Document Object Model is a way of representing a page of HTML as a tree of nodes.
+    <br>•	The document.getElementById() , document.getElementsByClassName() , document.getElementsByTagNames() and document.querySelector() can be used to access elements on a page.
+    <br>•	The parentNode() , previousSibling() , nextSibling() , childNodes() and children() methods can be used to navigate around the DOM tree.
+    <br>•	An element’s attributes can be accessed using the getAttribute() method, and updated using the setAttribute() method.
+    <br>•	The createElement() and createTextNode() methods can be used to create dynamic markup on the fly.
+    <br>•	Markup can be added to the page using the appendChild() and insertBefore() methods.
+    <br>•	Elements can be replaced using the replaceChild() method, and removed using the removeChild() method.
+    <br>•	The innerHTML property can be used to insert raw HTML directly into the DOM.
+    <br>•	The CSS properties of an element can be changed by accessing the style property.
+    <br>  
+    
+    <h2>Chapter 7</h2>
+    Events
+    <br>
+    Events are another part of the DOM and they are what provides the link between the web page and user interactions. Every time a user interacts with a web page, such as clicking on a link, pressing a key, or moving a mouse, an event occurs that our program can detect and then respond to.
+    <br>
+    Using Event Listeners
+    The recommended way of dealing with events, and the current standard, is to use event listeners. These were outlined in DOM level 2 and allow multiple functions to be attached independently to different events. They are supported in all modern browsers, although only in Internet Explorer from version 9 onwards.
+    <br>
+    The addEventListener() method is called on a node object, the node to which the event listener is being applied. For example, this code will attach an event listener to the document’s body:
+    <br>
+    <h3>Chapter 7 Summary</h3>
+    •	Events occur when a user interacts with a web page.<br>
+    •	An event listener is attached to an element, then invokes a callback function when the event occurs.<br>
+    •	The event object is passed to the callback function as an argument, and contains lots of properties and methods relating to the event.<br>
+    •	There are many types of event, including mouse events, keyboard events, and touch events.<br>
+    •	You can remove an event using the removeEventListener method.<br>
+    •	The default behavior of elements can be prevented using the preventDefault() function.<br>
+    •	Event propagation is the order the events fire on each element.<br>
+    •	Event delegation is when an event listener is added to a parent element to capture events that happen to its children elements.<br>
+    •	In the next chapter, we’ll look at how we can use forms to enter information into the browser, and use events to process that information.<br>
+    
 </p>
 <footer>
   &copy;2018, William Burton, Location: California; 
