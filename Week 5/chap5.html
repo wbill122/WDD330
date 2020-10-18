@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript</h1>
+
+
+<script>
+function three(){ unicorn(); }
+function two(){ three(); }
+function one(){ two(); }
+one();
+</script>
+<button type="button" onclick="one()">Click Me!</button>
+
+<script>
+function squareRoot(number) {
+    'use strict';
+    if (number < 0) {
+        throw new RangeError('You can't find the square root of negative numbers')
+    }
+    return Math.sqrt(number);
+};
+</script>
+<button type="button" onclick="squareRoot(25)">SR!</button>
+</body>
+</html>
