@@ -1,0 +1,83 @@
+body {
+    background: #05386B;
+    color: whitesmoke;
+    font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    line-height: 2;
+    font-size: 75px;
+  }
+  
+  .container {
+    background: #05386B;
+    max-width: 450px;
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+    margin-top: 40px;
+    border: 2px solid black;
+  }
+  
+  input {
+    border: none;
+    display: block;
+    width: 100%;
+    line-height: 2;
+    padding: 10px 0 10px 10px;
+    border-bottom: 2px solid whitesmoke;
+    outline-style: ridge;
+  }
+  button { 
+    background-color: whitesmoke;
+   color: #05386B;
+   font-family: 'Roboto' 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, ;
+   margin-top: 4px;
+   padding: 8px 17px; 
+ 
+    } 
+ 
+  
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li li {
+    color: whitesmoke;
+    font-weight: 425;
+    border-bottom: 3px solid whitesmoke;
+    line-height: 2;
+    padding: 10px 0;
+  }
+  
+   li li:before {
+    content: "\080";
+    padding: 10px 10px;
+    font-size: 20px;
+  } 
+  
+ 
+  .button {
+    text-align: center;
+  }
+  
+  .checked {
+    color:red;
+  }
+  
+  .checked:before {
+    content: "\2713";
+    padding: 10px 10px;
+    font-size: 20px;
+  }  
+
+  .checked:after {
+    content: " (Task Completed)";
+    color: red;
+    text-align: right;
+  }
+  
