@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=divice-width, initial-scale=1, maximum-scale=1">
+    <title>WDD 330 Assignment Portal | William (Bill) Burton | BYU-Idaho</title>
+    <meta name="description" content="Assignment portal page for William Burton in WWD 330: Web Frontend Development II at BYU-Idaho">
+  
+  </head>
+  <h1>Week 7, Chapter 11 Notes</h1>
+  </head>
+  <p>
+    <body>
+      <h2>Function Properties and Methods</h2>
+The fact that functions are first-class objects means they can have properties and methods themselves.
+<br>
+<h3>Call and Apply Methods</h3>
+<br>
+The call() method can be used to set the value of this inside a function to an object that is provided as the first argument.<br>
+
+<h3>Custom Properties</h3>
+There is nothing to stop you adding your own properties to functions in the same way that you can add properties to any object in JavaScript.<br>
+<h3>Memorization</h3>
+A useful feature of this is that it provides result caching, or memorization.<br>
+If a function takes some time to compute a return value, we can save the result in a cache property. Then if the same argument is used again later, we can return the value from the cache, rather than having to compute the result again.<br>
+
+<h3>Immediately Invoked Function Expressions</h3>
+An Immediately Invoked Function Expression– or IIFE – (pronounced 'iffy') is an anonymous function that, as the name suggests, is invoked as soon as it’s defined. This is easily achieved by placing parentheses at the end of the function definition (remember we use parentheses to invoke a function)<br>
+
+<h3>Initialization Code</h3>
+An IIFE can be used to set up any initialization code that there’ll be no need for again. Because the code is only run once, there’s no need to create any reusable, named functions, and all the variables will also be temporary. <br>An IIFE will be invoked once, and can set up any variables, objects and event handlers when the page loads.
+
+<h3>Creating Self-contained Code Blocks</h3>
+An IIFE can be used to enclose a block of code inside its own private scope so it doesn’t interfere with any other part of the program. Using IIFEs in this way means code can be added or removed separately.
+
+<h3>Functions that Define and Rewrite Themselves</h3>
+The dynamic nature of JavaScript means that a function is able to not only call itself, but define itself, and even redefine itself. This is done by assigning an anonymous function to a variable that has the same name as the function.
+<h3>Recursive Functions</h3>
+A recursive function is one that invokes itself until a certain condition is met. It’s a useful tool to use when iterative processes are involved. A common example is a function that calculates thefactorialof a number:
+
+function factorial(n) {
+    if (n === 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+This function will return 1 if 0 is provided as an argument (0 factorial is 1), otherwise it will multiply the argument by the result of invoking itself with an argument of one less. The function will continue to invoke itself until finally the argument is 0 and 1 is returned. This will result in a multiplication of 1, 2, 3 and all the numbers up to the original argument.
+
+<h3>Recursive Functions</h3>
+A recursive function is one that invokes itself until a certain condition is met. It’s a useful tool to use when iterative processes are involved. A common example is a function that calculates thefactorialof a number:
+
+function factorial(n) {
+    if (n === 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+<h3>Event-driven Asynchronous Programming</h3>
+Callbacks can be used to facilitate event-driven asynchronous programming. JavaScript is a single-threaded environment, which means only one piece of code will ever be processed at a time. This may seem like a limitation, but non-blocking techniques can be used to ensure that the program continues to run. Instead of waiting for an event to occur, a callback can be created that’s invoked when the event happens.
+<h3>Promises</h3>
+A promise represents the future result of an asynchronous operation. Promises don't do anything that can't already be achieved using callbacks, but they help simplify the process, and avoid the convoluted code that can result from using multiple callbacks.
+The Promise Life Cycle
+When a promise is created, it calls an asynchronous operation and is then said to bepending. It remains in this state while the operation is taking place.
+<h3>A Super Promise</h3>
+Imagine if a shady character gave you a red pill, and promised that if you took it, you'd be a superhero. Being an adventurous sort, you swallow the pill and wait to see what happens.
+<h3>Creating A Promise</h3>
+A promise is created using a constructor function. This takes a function called anexecutoras an argument. The executor initializes the promise and starts the asynchronous operation.
+
+<h3>Chaining Multiple Promises</h3>
+Promises come into their own when multiple asynchronous tasks are required to be carried out one after the other. If each function that performs an asynchronous operation returns a promise, we can chain the then() methods together to form a sequential piece of code that’s easy to read. Each promise will only begin once the previous promise has been settled.
+login(userName)
+.then(user => getPlayerInfo(user.id))
+.then(info => loadGame(info))
+.catch( throw error)
+<h3>Async Functions</h3>
+Async functions were added to the ES2017 specification.
+Generalized Functions
+Callbacks can be used to build more generalized functions. Instead of having lots of specific functions, one function can be written that accepts a callback.
+We've just seen that functions can accept another function as an argument (a callback), but they can also return a function.
+
+The example below shows a function called returnHello() that returns a 'Hello World' function:
+
+function returnHello() {
+    console.log('returnHello() called');
+    return function() {
+        console.log('Hello World!');
+    }
+}
+When the returnHello() function is invoked, it logs a message to the console then returns another function:
+<br>
+returnHello()
+<< returnHello() called
+
+function wait(message, callback, seconds){
+    setTimeout(callback,seconds * 1000);
+    console.log(message);
+}
+
+function selfDestruct(){
+    console.log('BOOOOM!');
+}
+wait('This tape will self-destruct in five seconds ... ', selfDestruct, 10);
+console.log('Hmmm, should I accept this mission or not ... ?');
+<br>
+  </body>
+  <br><br>
+ <footer>
+   &copy;2020, William Burton, Location: California; 
+   <a href="http://www.byui.edu/online"> BYU-Idaho Online Learning</a>
+ </footer>
+  </html> 
