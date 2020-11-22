@@ -1,0 +1,42 @@
+<aDOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>WDD 330 Assignment Portal | William (Bill) Burton | BYU-Idaho</title>
+    <meta name="description" content="Assignment portal page for William Burton in CIT 230: Web Frontend Development at BYU-Idaho"> </body>
+   <body>
+<h1>Notes</h1> 
+<h2>Using built-in form validation</h2>
+One of the most significant features of HTML5 form controls is the ability to validate most user data without relying on JavaScript. 
+<br>This is done by using validation attributes on form elements. We've seen many of these earlier in the course, but to recap:<br>
+required: <br>Specifies whether a form field needs to be filled in before the form can be submitted.
+minlength and maxlength: Specifies the minimum and maximum length of textual data (strings)
+min and max: <br>Specifies the minimum and maximum values of numerical input types
+type:<br> Specifies whether the data needs to be a number, an email address, or some other specific preset type. 
+pattern: <br>Specifies a regular expression that defines a pattern the entered data needs to follow.
+If the data entered in a form field follows all of the rules specified by the above attributes, it is considered valid.<br> If not, it is considered invalid.<br>
+
+<h2>Validating forms using JavaScript</h2>
+You must use JavaScript if you want to take control over the look and feel of native error messages or to deal with legacy browsers that do not support HTML's built-in form validation.<br> In this section we will look at the different ways to do this.<br>
+The Constraint Validation API
+Most browsers support the Constraint Validation API, which consists of a set of methods and properties available on the following form element DOM interfaces:
+
+<h2>Validating forms without a built-in API</h2>
+In some cases, such as legacy browser support or custom controls, you won't be able to or won't want to use the Constraint Validation API.<br>You're still able to use JavaScript to validate your form, but you'll just have to write your own.<br>
+
+<h2>Fetch</h2>
+The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses.<br> It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.<br>
+This kind of functionality was previously achieved using XMLHttpRequest.<br> Fetch provides a better alternative that can be easily used by other technologies such as Service Workers.<br> Fetch also provides a single logical place to define other HTTP-related concepts such as CORS and extensions to HTTP.<br>
+
+<h2>Checking that the fetch was successful</h2>
+A fetch() promise will reject with a TypeError when a network error is encountered or CORS is misconfigured on the server-side, although this usually means permission issues or similar — a 404 does not constitute a network error, for example.<br> An accurate check for a successful fetch() would include checking that the promise resolved, then checking that the Response.<br>ok property has a value of true.<br> 
+
+
+</body>
+<br><br>
+<footer>
+&copy;2020, William Burton, Location: California; 
+<a href="http://www.<br>>byui.<br>>edu/online"> BYU-Idaho Online Learning</a>
+</footer>
+</html> 
