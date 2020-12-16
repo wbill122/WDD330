@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Concrete Quantity</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <script src="main.js"></script>
+<body>
+    <h1>Concrete Construction</h1>
+     <main>
+        <img src="Concrete.jpg" alt = "Concrete" width="1000" height="600">
+        <p>Enter the Length, width and height/depth of your concrete project.</p>
+        Length (ft): <input type="text" id="length" size="5"><br>
+        Width (ft): <input type="text" id="width" size="5"><br>
+        Height/Depth (ft): <input type="text" id="height" size="5"><br>
+        <br>
+        <button type="button" onclick="displayPay()">Compute Volume of Concrete</button>
+        <div id="output"></div>
+        <div id="output"></div>
+        <p>Enter the percentage amount for each component. <b>Percentage amount should total 100%.</b></p>
+        <aside class="getPercentages">
+            Quantity of Cement 10%-15%: <input type="text" id="cement" size="5"><br>
+            Quantity of Course Aggergates 40%-50%: <input type="text" id="caggergate" size="5"><br>
+            Quantity of Fine Aggergates 30%-40%: <input type="text" id="faggergate" size="5"><br>
+            Quantity of Water 15%-20%: <input type="text" id="water" size="5"><br>
+            Air Entrainment: 5%-8%<input type="text" id="air" size="5"><br>
+        </aside>
+        <br>
+        <button type="button" onclick="getConcrete()">See Quantity Brakedown</button>
+        <br>
+        <div id="concreteOutput"></div>
+        <h2>Total Cost of Concrete:</h2>
+        <p id="localStorage"></p>
+        <button type="button" onclick="clearStorage()">Clear Calculations</button>
+    </main>
+    
+</body>
+</html>

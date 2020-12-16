@@ -1,0 +1,43 @@
+main {
+    background:black url(/WDD330/javascript.jpg) no-repeat center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family:'Arial', sans-serif;
+    font-size: 24pt;
+    font-weight: bold;
+    position: relative;
+  text-align: left;
+  color: #faf9f9;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 75px;
+}
+h1 {
+  text-align: left;
+  color: #faf9f9;
+  font-family: 'Arial', sans-serif;
+  font-size: 60px;
+  background-color: rgb(0, 25, 139);
+}
+img {
+  padding-top: 10px;
+  border-radius: 75%;
+  float: center;
+  }
+
+header {
+background-color: #080808;
+font-family: 'Arial', sans-serif;
+font-weight: bold;
+position: relative;
+text-align: left;
+padding-bottom: 30px;
+color: white;
+}
+a.ex1
+  hover, a.ex1:active {color: red;}
+
+
+
+
